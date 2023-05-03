@@ -75,7 +75,7 @@ spec:
 
     # Provide the path of aws credentials mounted from secret  
     - name: AWS_SHARED_CREDENTIALS_FILE
-      value: '/tmp/cloud_config.yml'      
+      value: '/cloud-secret.yml'      
 
     # Provide the name of ssm doc 
     # if not using the default stress docs  
@@ -126,4 +126,4 @@ spec:
       app.kubernetes.io/version: latest
     secrets:
     - name: cloud-secret
-      mountPath: /tmp/
+      mountPath: /
