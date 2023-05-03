@@ -4,9 +4,9 @@ description:
     Execute AWS SSM Chaos on given ec2 instance IDs
 kind: ChaosExperiment
 metadata:
-  name: aws-ssm-chaos-by-id
+  name: aws-ssm-chaos-by-id-vm
   labels:
-    name: aws-ssm-chaos-by-id
+    name: aws-ssm-chaos-by-id-vm
     app.kubernetes.io/part-of: litmus
     app.kubernetes.io/component: chaosexperiment
     app.kubernetes.io/version: latest
@@ -46,7 +46,7 @@ spec:
     imagePullPolicy: Always
     args:
     - -c
-    - ./experiments -name aws-ssm-chaos-by-id
+    - ./experiments -name aws-ssm-chaos-by-id-vm
     command:
     - /bin/bash
     env:
@@ -120,7 +120,7 @@ spec:
       value: 'litmus'  
           
     labels:
-      name: aws-ssm-chaos-by-id
+      name: aws-ssm-chaos-by-id-vm
       app.kubernetes.io/part-of: litmus
       app.kubernetes.io/component: experiment-job
       app.kubernetes.io/version: latest
